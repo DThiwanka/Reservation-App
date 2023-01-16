@@ -1,4 +1,5 @@
 import React from 'react'
+import Featured from '../../components/featured/Featured'
 import Header from '../../components/header/Header'
 import NavBar from '../../components/navBar/NavBar'
 import "./home.css"
@@ -8,6 +9,10 @@ const Home = () => {
     <div>
       <NavBar/>
       <Header/>
+      <div className="homeContainer">
+        <Featured/>
+        <Featured/>
+      </div>
     </div>
   )
 }

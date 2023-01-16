@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Header from "../../components/header/Header";
+import NavBar from "../../components/navBar/NavBar";
 
-function List() {
-  return (
+const List = () =>{
+  return(
     <div>
-      List
+      <NavBar/>
+     <Header type="list"/>
+
     </div>
   )
 }
