@@ -13,9 +13,10 @@
     margin: 20px 0px 100px 0px;
 }
 
-.headerContainer.listMode{
+.headerContainer.listMode {
     margin: 20px 0px 0px 0px;
 }
+
 .headerList {
     display: flex;
     gap: 40px;
@@ -50,7 +51,7 @@
     cursor: pointer;
 }
 
-.headerSearch{
+.headerSearch {
     height: 30px;
     background-color: white;
     border: 3px solid #febb02;
@@ -60,40 +61,41 @@
     padding: 10px 0px;
     border-radius: 5px;
     position: absolute;
-    bottom:-25px;
+    bottom: -25px;
     width: 100%;
     max-width: 1024px;
 }
 
-.headerIcon{
+.headerIcon {
     color: lightgray;
 }
 
-.headerSearchItem{
+.headerSearchItem {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.headerSearchInput{
+.headerSearchInput {
     border: none;
     outline: none;
 
 }
 
-.headerSearchText{
+.headerSearchText {
     color: lightgray;
     cursor: pointer;
 }
 
-.date{
+.date {
     position: absolute;
     top: 50px;
     margin-top: 10px;
-
+    z-index: 2;
 }
 
-.options{
+.options {
+    z-index: 2;
     position: absolute;
     top: 50px;
     background-color: white;
@@ -101,20 +103,20 @@
     border-radius: 5px;
     margin-top: 10px;
     margin-left: 5%;
-    -webkit-box-shadow: 0px 0px 10px 3px rgba(0,113,194,0.42);
-    -moz-box-shadow: 0px 0px 10px 3px rgba(0,113,194,0.42);
-    box-shadow: 0px 0px 10px 3px rgba(0,113,194,0.42);
-    
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 113, 194, 0.42);
+    -moz-box-shadow: 0px 0px 10px 3px rgba(0, 113, 194, 0.42);
+    box-shadow: 0px 0px 10px 3px rgba(0, 113, 194, 0.42);
+
 }
 
-.optionItem{
+.optionItem {
     width: 200px;
     display: flex;
     justify-content: space-between;
     margin: 10px;
 }
 
-.optionCounter{
+.optionCounter {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -122,7 +124,7 @@
     color: black;
 }
 
-.optionCounterButton{
+.optionCounterButton {
     width: 30px;
     height: 30px;
     border-radius: 2px solid #0071c2;
@@ -131,6 +133,6 @@
     background-color: white;
 }
 
-.optionCounterButton:disabled{
+.optionCounterButton:disabled {
     cursor: not-allowed;
 }
