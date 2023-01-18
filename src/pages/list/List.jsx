@@ -5,6 +5,7 @@ import NavBar from "../../components/navBar/NavBar";
 import { useLocation } from "react-router-dom";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
+import SearchItem from "../../components/searchItem/SearchItem";
 
 const List = () => {
 
@@ -41,7 +42,7 @@ const List = () => {
 
           <div className="lsItem">
             <label>Options</label>
-
+          <div className="lsOptions">
            <div className="lsOptionItem">
             <span className="lsOptionText">Min Price <small>Per Night</small></span>
             <input type="number" className="lsOptionInput" />
@@ -68,11 +69,18 @@ const List = () => {
            </div>
 
           </div>
-
-
+          </div>
+<button>Search</button>
           </div>
             <div className="listResult"></div>
+            <SearchItem/>
+            <SearchItem/>
+            <SearchItem/>
+            <SearchItem/>
+            <SearchItem/>
+            <SearchItem/>
           </div>
+          
         </div>
       
     </div>
