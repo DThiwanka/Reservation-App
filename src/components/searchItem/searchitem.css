@@ -14,27 +14,31 @@
     object-fit: cover;
 }
 
-.siDesc{
+.siDesc {
     display: flex;
     flex-direction: column;
     gap: 20px;
     flex: 2;
 }
 
-.siDetails{
+.siDetails {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
-.siItem{
+.siItem {
     font-size: 20px;
     color: #0071c2;
 }
 
-.siDistance{
+.siDistance {
     font-size: 12px;
 }
 
-.siTaxiOp{
+.siTaxiOp {
     font-size: 12px;
     background-color: #008009;
     color: white;
@@ -43,23 +47,61 @@
     border-radius: 5px;
 }
 
-.siSubtitle{
+.siSubtitle {
     font-size: 12px;
     font-weight: bold;
 }
 
-.siFeatures{
-font-size: 12px;
+.siFeatures {
+    font-size: 12px;
 
 }
 
-.siCancelOp{
+.siCancelOp {
     font-size: 12px;
     color: #008009;
     font-weight: bold;
 }
 
-.cancelOpSubtitle{
+.cancelOpSubtitle {
     font-size: 12px;
-    color: #008009; 
+    color: #008009;
+}
+
+.siRating {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.siRating>button {
+    font-weight: 500px;
+}
+
+.siRating>span {
+    background-color: #003580;
+    color: white;
+    font-weight: bold;
+}
+
+.siDetailstxt{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.siPrice{
+    font-size: 24px;
+    
+}
+.siTaxOp{
+    font-size: 12px;
+    color: gray;
+}
+
+.siCheckButton{
+    background-color: #0071c2;
+    color: white;
 }
