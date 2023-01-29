@@ -1,5 +1,5 @@
 export const CreateError = (status,message) =>{
-    const er = new Error();
+    const err = new Error();
     err.status = status;
     err.message = message;
     return err;
