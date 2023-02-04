@@ -1,9 +1,15 @@
 import React from 'react'
+import useFetch from '../../hooks/useFetch'
 import './featured.css'
 
-const featured = () => {
+const Featured = () => {
+
+  const {data,loading,error} = useFetch("/api/hotels/countByCity?cities=berlin,madrid,london")
+
+  console.log(data);
+
   return (
-   
+
       <div className="featured">
         <div className="featuredItem">
           <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=449&q=80" alt="testjpg"/>
@@ -33,4 +39,4 @@ const featured = () => {
   )
 }
 
-export default featured
+export default Featured
