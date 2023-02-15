@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import './list.css'
 import Header from "../../components/header/Header";
 import NavBar from "../../components/navBar/NavBar";
-import { useLocation } from "react-router-dom";
+import { useFetcher, useLocation } from "react-router-dom";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import SearchItem from "../../components/searchItem/SearchItem";
+import useFetch from '../../hooks/useFetch'
 
 const List = () => {
 
@@ -16,6 +17,8 @@ const List = () => {
   const [openDate, setOpenDate] = useState(false)
   const [options, setOptions] = useState(location.state.options)
   // console.log(location);
+
+  const {data,loading,error,refetch} = useFetch(`/hotel?city=${destination}`)
 
   return (
     <div>
@@ -72,14 +75,17 @@ const List = () => {
             </div>
             <button>Search</button>
           </div>
+
           <div className="listResult">
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            <SearchItem />
-            </div>
+            {loading ? "loading" : <>
+            {data.map(item=>(
+              <SearchItem item={item} key={item._id}/>
+            ))}
+              
+            </>}
+
+
+          </div>
 
         </div>
 
