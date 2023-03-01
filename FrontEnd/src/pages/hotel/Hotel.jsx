@@ -11,10 +11,17 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import useFetch from "../../hooks/useFetch";
 
 const Hotel = () => {
+  const location = useLocation();
+  const path = location.
+  console.log(location)
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
+
+  const {data,loading,error} = useFetch( `/hotels/`)
 
   const photos = [
     {

@@ -1,33 +1,38 @@
- import React from 'react'
-import './searchitem.css'
+import { Link } from "react-router-dom";
+import "./searchitem.css";
 
-const SearchItem = () => {
+const SearchItem = ({ item }) => {
   return (
-    <div className='searchItem'>
-      <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=449&q=80" alt="testjpg" className='siImage' />
-
-    <div className='siDesc'>
-      <h1 className='siTitle'>Tower Street Apartments</h1>
-      <span className='siDistance'>Free Airport Center</span>
-      <span className='siTaxiOp'>Free Airport Taxi</span>
-      <span className='siSubtitle'>Studio Aprtments with Air Conditioning</span>
-      <span className='siFeatures'>Entire Studio * 1 bathroom * 21m<sup>2</sup> 1 full bed</span>
-      <span className='siCancelOp'>Free Cancellation</span>
-      <span className='siCancelOpSubtitle'>You Can Cancel Later,<blockquote>So lock in this great price Today;</blockquote></span>
-    </div>
-    <div className='siDetails'>
-      <div className="siRating">
-        <span>Excellent</span>
-        <button>8.9</button>
+    <div className="searchItem">
+      <img src={item.photos[0]} alt="" className="siImg" />
+      <div className="siDesc">
+        <h1 className="siTitle">{item.name}</h1>
+        <span className="siDistance">{item.distance}m from center</span>
+        <span className="siTaxiOp">Free airport taxi</span>
+        <span className="siSubtitle">
+          Studio Apartment with Air conditioning
+        </span>
+        <span className="siFeatures">{item.desc}</span>
+        <span className="siCancelOp">Free cancellation </span>
+        <span className="siCancelOpSubtitle">
+          You can cancel later, so lock in this great price today!
+        </span>
       </div>
-      <div className="siDetailstxt">
-        <span className="siPrice">$123</span>
-        <span className="siTaxOp">Includes Tax and Fees</span>
-        <button className='siCheckButton'>See Details</button>
+      <div className="siDetails">
+        {item.rating && <div className="siRating">
+          <span>Excellent</span>
+          <button>{item.rating}</button>
+        </div>}
+        <div className="siDetailTexts">
+          <span className="siPrice">${item.cheapestPrice}</span>
+          <span className="siTaxOp">Includes taxes and fees</span>
+          <Link to={`/hotels/${item._id}`}>
+          <button className="siCheckButton">See availability</button>
+          </Link>
+        </div>
       </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default SearchItem
+export default SearchItem;
